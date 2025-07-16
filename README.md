@@ -23,18 +23,14 @@ O projeto foi construído sobre uma arquitetura de microsserviços conteinerizad
 
 ## 🚧 Estado Atual do Projeto
 
-Atualmente, a infraestrutura base está 100% funcional. O bot já está conectado à Evolution API, sendo capaz de receber mensagens do WhatsApp e enviar respostas básicas. A estrutura para a implementação do RAG (pastas `rag_files` e `vectorstore_data`) está criada.
+Atualmente, a infraestrutura base está 100% funcional. O bot se conecta a instância do evolutionAPI, recebe mensagens do WhatsApp e response baseado em histórico de conversa + documentos inseridos pelo usuário.
 
 ---
 
 ## 📝 Roadmap e Próximos Passos
 
-O foco agora é evoluir a inteligência do bot. Os próximos passos são:
-
-- [ ] **Treinar a IA:** Ingerir documentos na pasta `rag_files` para criar uma base de conhecimento em um Vectorstore e treinar o bot para responder perguntas sobre um assunto específico.
-- [ ] **Implementar Memória de Conversa:** Utilizar o PostgreSQL para que o bot se lembre de interações passadas com o usuário.
-- [ ] **Refinar os Prompts:** Melhorar as instruções dadas ao modelo de linguagem para obter respostas mais precisas e coerentes.
-- [ ] **Criar uma Chain de Decisão:** Desenvolver uma lógica mais complexa com LangChain para que o bot possa executar diferentes ações com base na intenção do usuário.
+- [ ] **Debounce/Buffer** incrementar debounce/buffer 
+- [ ] **Integrar a IA:** integrar o aprendizado do chatbot com IA em outros projetos
 
 ---
 
@@ -54,5 +50,10 @@ O foco agora é evoluir a inteligência do bot. Os próximos passos são:
 
 1.  Clone este repositório.
 2.  Crie um arquivo `.env` a partir do `env.example` e preencha suas chaves de API e credenciais.
+3.  Crie uma pasta na raiz do projeto chamada: rag_files e insira seus documentos a serem vetorizados
 3.  Execute `docker-compose up --build`.
-4.  Conecte seu WhatsApp à instância da Evolution API seguindo a documentação oficial.
+4.  Acesse localhost:8080/manager, insira sua chave de api_key criada no .env para poder acessar
+5.  Crie uma instância com mesmo nome da váriavel: **EVOLUTION_INSTANCE_NAME** e selecione opção Balleys
+6.  Conecte seu whatsapp a instância do evolutionAPI através da leitura do QRcode
+7.  Vá em webhooks, insira: http://bot:8000/webhook na url do webhook, adicione MESSAGE UPSERT como tipo de evento, seleciona a caixa de webhook de eventos, habilite e clique em salvar
+8.  Aguarde para que o EvolutionAPI processe todos os contatos/conversas e em seguida o bot começará a responder automaticamente.
