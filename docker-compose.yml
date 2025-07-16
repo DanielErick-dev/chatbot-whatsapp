@@ -58,12 +58,12 @@ services:
     env_file:
       - .env
     volumes:
-      - ./vectorstore_data:/app/vectorstore
+      - ./vectorstore:/app/vectorstore
       - ./rag_files:/app/rag_files
 
 volumes:
   evolution_instances:
   postgres_data:
   redis:
-  vectorstore_data:
+  vectorstore:
   rag_files:
