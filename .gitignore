@@ -1,5 +1,5 @@
 .env
 venv
 db.sqlite3
-vectorstore_data/
+vectorstore/
 rag_files/
