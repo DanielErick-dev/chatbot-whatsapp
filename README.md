@@ -1,6 +1,5 @@
 # ChatBot de WhatsApp com RAG, LangChain e FastAPI
 
-![Status](https://img.shields.io/badge/status-em_desenvolvimento-yellow)
 ![Python](https://img.shields.io/badge/Python-3.11-blue?logo=python)
 ![FastAPI](https://img.shields.io/badge/FastAPI-0.100-green?logo=fastapi)
 ![LangChain](https://img.shields.io/badge/LangChain-AI-orange)
