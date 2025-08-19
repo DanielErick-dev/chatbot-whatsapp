@@ -5,7 +5,7 @@
 ![FastAPI](https://img.shields.io/badge/FastAPI-0.100-green?logo=fastapi)
 ![LangChain](https://img.shields.io/badge/LangChain-AI-orange)
 
-Este projeto é um ChatBot de WhatsApp em desenvolvimento, projetado para atuar como um assistente especialista em um tópico específico, utilizando uma arquitetura RAG (Retrieval-Augmented Generation).
+Este projeto é um ChatBot de WhatsApp, projetado para atuar como um assistente especialista em um tópico específico, utilizando uma arquitetura RAG (Retrieval-Augmented Generation).
 
 ---
 
@@ -21,15 +21,13 @@ O projeto foi construído sobre uma arquitetura de microsserviços conteinerizad
 
 ---
 
-## 🚧 Estado Atual do Projeto
+## 🚧 Funcionalidade
 
-Atualmente, a infraestrutura base está 100% funcional. O bot se conecta a instância do evolutionAPI, recebe mensagens do WhatsApp e response baseado em histórico de conversa + documentos inseridos pelo usuário.
+Atualmente, a infraestrutura base está 100% funcional. O bot se conecta a instância do evolutionAPI, recebe mensagens do WhatsApp e response baseado em histórico de conversa + documentos inseridos pelo usuário aplicando debounce(tempo de espera) + buffer(armazenamento temporário de informações)
 
 ---
 
 ## 📝 Roadmap e Próximos Passos
-
-- [ ] **Debounce/Buffer** incrementar debounce/buffer 
 - [ ] **Integrar a IA:** integrar o aprendizado do chatbot com IA em outros projetos
 
 ---
